@@ -2,6 +2,12 @@
 
 {% block title %}Home{% endblock title %}
 
-{% block content%}
-    <h1>Este es el home</h1>    
-{% endblock content%}
+{% block content %}
+    <h1>Mano tengo fe!</h1>
+    {% if user.is_authenticated %}
+        <p>Epale {{ user.email }}</p>
+    {% else %}
+        <p>No estás registrado</p>
+        <a href="{% url 'login' %}">Log In</a> <!--login es el parametro que aparece en la url como name -->
+    {% endif %}
+{% endblock content %}
