@@ -13,5 +13,6 @@
     {% else %}
         <p>No estás registrado</p>
         <a href="{% url 'login' %}">Log In</a> <!--login es el parametro que aparece en la url como name -->
+        <a href="{% url 'signup' %}">Sign Up</a>
     {% endif %}
 {% endblock content %}
