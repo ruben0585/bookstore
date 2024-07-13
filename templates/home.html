@@ -6,7 +6,8 @@
 {% block content %}
     <h1>Mano tengo fe!</h1>
     <img class="bookcover" src="{% static 'images/Cheesecake.jpg' %}" alt="cheesecake">
-    {% if user.is_authenticated %}
+    
+    <!--{% if user.is_authenticated %}
         <p>Epale {{ user.email }}</p>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
@@ -14,7 +15,8 @@
         </form>
     {% else %}
         <p>No estás registrado</p>
-        <a href="{% url 'login' %}">Log In</a> <!--login es el parametro que aparece en la url como name -->
+        <a href="{% url 'login' %}">Log In</a> <!-login es el parametro que aparece en la url como name ->
         <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+    {% endif %}-->
+    
 {% endblock content %}
