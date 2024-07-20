@@ -1,0 +1,7 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    {% for book in book_list %} <!-- book es el modelo y book_list es un comando que tiene django definido para listar los elementos de una tabla y se define colocando el nombre del modelo y _list -->
+        <a href="">{{ book.title}}</a>
+    {% endfor %}
+{% endblock content %}

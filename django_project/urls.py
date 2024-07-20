@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+    
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')), # for authentication
     path('accounts/', include('accounts.urls')),
     path('', include('pages.urls')),
+    path('books/', include('books.urls')), # esto sirve para que cuando acceda a esta ruta me muestre la url del ....?
     ]
