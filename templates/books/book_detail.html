@@ -8,6 +8,14 @@
     <div class="book-detail">
         <h2><a href="">{{ book.title }}</a></h2>
         <p>Author: {{ book.author }}</p>
-        <p>Price: {{ book.price }}</p>
+        <p>Price: {{ book.price }} $</p>
+        <div>
+            <h3>Reviews</h3>
+            <ul>
+                {% for review in book.reviews.all %}
+                    <li> <h5>{{ review.author }}</h5> {{ review.review }} </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 {% endblock content %}
