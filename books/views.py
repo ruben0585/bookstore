@@ -9,8 +9,7 @@ class BookListView(LoginRequiredMixin, ListView):
     model = Book
     template_name = 'books/book_list.html'
     login_url = '/accounts/login/'
-
+    
 class BookDetailView(DetailView):
     model = Book
     template_name = 'books/book_detail.html'
-
